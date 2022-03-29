@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap'); 
+
+body{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding:0; 
+   font-family: 'Playfair', sans-serif; 
+   height: 100vh; 
+}
+
+.nav{ 
+    border-bottom: 1px solid lightgray; 
+}
+
+.nav__toggle{ 
+    position: absolute; 
+    cursor: pointer; 
+    margin: 0rem 1rem; 
+    right: 0; 
+}
+
+svg{ 
+    width: 1.5rem; 
+}
+
+.close{ 
+ display: none; 
+}
+
+.menu{ 
+    margin-top: 0.2rem; 
+}
+
+.nav__checkbox{ 
+    display: none; 
+}
+
+.company-logo{ 
+    width: 2rem;
+}
+
+.nav__menu{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem;
+    align-items: center; 
+    margin: 1rem;
+}
+
+.nav__menu > li{ 
+   list-style: none; 
+}
+
+/* Using margin-right auto to push the logo to the left side of the screen */
