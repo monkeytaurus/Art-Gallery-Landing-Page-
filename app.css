@@ -1,54 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap'); 
-
-body{ 
-    box-sizing: border-box;
-    margin: 0;
-    padding:0; 
-   font-family: 'Playfair', sans-serif; 
-   height: 100vh; 
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
 }
 
-.nav{ 
-    border-bottom: 1px solid lightgray; 
+.nav {
+  border-bottom: 1px solid black;
 }
 
-.nav__toggle{ 
-    position: absolute; 
-    cursor: pointer; 
-    margin: 0rem 1rem; 
-    right: 0; 
+.nav__toggle {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  margin: 0rem 1rem;
 }
 
-svg{ 
-    width: 1.5rem; 
+.nav__toggle svg {
+  width: 1.5rem;
 }
 
-.close{ 
- display: none; 
+.nav__toggle .ham__menu {
+  margin-top: 0.2rem;
 }
 
-.menu{ 
-    margin-top: 0.2rem; 
+.nav__toggle .close {
+  display: none;
 }
 
-.nav__checkbox{ 
-    display: none; 
+.nav__checkbox {
+  display: none;
 }
 
-.company-logo{ 
-    width: 2rem;
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+  gap: 2rem;
 }
 
-.nav__menu{ 
-    display: flex; 
-    flex-direction: column; 
-    gap: 2rem;
-    align-items: center; 
-    margin: 1rem;
+.nav__menu li {
+  list-style: none;
+  display: none;
 }
 
-.nav__menu > li{ 
-   list-style: none; 
+.nav__menu li:first-child {
+  margin-right: auto;
+  display: block;
 }
 
-/* Using margin-right auto to push the logo to the left side of the screen */
+.nav__menu li .company-logo {
+  width: 2.5rem;
+  display: block;
+}
+
+.nav__menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+}
+
+#nav__checkbox:checked ~ .nav__menu li {
+  display: block;
+}
+
+#nav__checkbox:checked ~ .nav__toggle .ham__menu {
+  display: none;
+}
+
+#nav__checkbox:checked ~ .nav__toggle .close {
+  display: block;
+}
+
+@media only screen and (min-width: 560px) {
+  .nav__toggle {
+    display: none;
+  }
+  .nav__menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav__menu li {
+    display: block;
+  }
+}
+/*# sourceMappingURL=app.css.map */
