@@ -1,0 +1,87 @@
+body{ 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    height: 100vh; 
+}
+.nav{ 
+border-bottom: 1px solid black;
+    &__toggle{ 
+        position: absolute;
+        cursor: pointer;  
+        right: 0; 
+        margin: 0rem 1rem; 
+        svg{ 
+            width: 1.5rem; 
+    }
+
+    .ham__menu{ 
+        margin-top:0.2rem; 
+    }
+    
+        .close{ 
+            display: none; 
+        }
+    }
+
+    &__checkbox{ 
+        display:none; 
+    }
+    
+
+    &__menu{ 
+        display:flex; 
+        flex-direction: column;
+        align-items: center; 
+        margin: 1rem; 
+        gap: 2rem; 
+
+        li{ 
+
+            list-style: none;
+            display: none;  
+            &:first-child{  
+                margin-right: auto;
+                display: block;
+            }
+            .company-logo{ 
+                width: 2.5rem; 
+                display: block; 
+            }
+            a{ 
+                text-decoration: none; 
+                color: black;
+                font-size : 1.3rem;
+            }
+        }
+    }
+} 
+
+//End of Nav 
+
+ #nav__checkbox:checked ~ .nav__menu li{ 
+     display: block; 
+}
+ 
+ #nav__checkbox:checked ~ .nav__toggle .ham__menu { 
+     display: none; 
+}
+
+ #nav__checkbox:checked ~ .nav__toggle .close { 
+     display: block; 
+}
+
+ 
+ @media only screen and (min-width: 560px ){ 
+   .nav{ 
+       &__toggle{ 
+           display: none; 
+       }
+       &__menu{ 
+        flex-direction: row;
+        li{ 
+            display: block;
+        }
+       }
+   } 
+ }
