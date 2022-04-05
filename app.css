@@ -1,13 +1,12 @@
-body {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
 }
 
-.nav {
-  border-bottom: 1px solid black;
+body {
+  height: 100vh;
 }
 
 .nav__toggle {
@@ -44,7 +43,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem;
   gap: 2rem;
 }
 
@@ -58,8 +56,8 @@ body {
   display: block;
 }
 
-.nav__menu li .company-logo {
-  width: 2.5rem;
+.nav__menu li .nav__logo {
+  width: 1.7rem;
   display: block;
 }
 
@@ -79,6 +77,136 @@ body {
 
 #nav__checkbox:checked ~ .nav__toggle .close {
   display: block;
+}
+
+.header {
+  background: url(/images/icecream.jpg) center no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.header__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.grid-container__item1__img {
+  width: 100%;
+}
+
+.grid-container__item2__content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid-container__item2__content__header {
+  margin-bottom: 2rem;
+}
+
+.grid-container__item2__content__paragraph {
+  margin-bottom: 2rem;
+}
+
+.grid-container__item3__img {
+  width: 100%;
+}
+
+.grid-container__item4__content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid-container__item4__content__header {
+  margin-bottom: 2rem;
+}
+
+.grid-container__item4__content__paragraph {
+  margin-bottom: 2rem;
+}
+
+.grid-container__item5__img {
+  width: 100%;
+}
+
+.footer__pre__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.footer__pre__footer svg {
+  width: 1.75rem;
+}
+
+.footer__pre__footer h6 {
+  font-size: 1.25rem;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.footer__pre__footer p {
+  margin-bottom: 1rem;
+}
+
+.footer__pre__footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer__pre__footer__column1 {
+  background-color: red;
+  padding: 1rem;
+}
+
+.footer__pre__footer__column2 {
+  background-color: blue;
+  padding: 1em;
+}
+
+.footer__pre__footer__column3 {
+  background-color: green;
+  padding: 1em;
+}
+
+.footer__pre__footer__column4 {
+  background-color: yellow;
+  padding: 1em;
+}
+
+.footer__widgets__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.footer__widgets__social svg {
+  width: 2rem;
+}
+
+.footer__widgets__social li {
+  list-style: none;
 }
 
 @media only screen and (min-width: 560px) {
