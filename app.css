@@ -141,7 +141,7 @@ body {
   width: 100%;
 }
 
-.footer__pre__footer {
+.grid-container__component {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,41 +152,41 @@ body {
   text-align: center;
 }
 
-.footer__pre__footer svg {
+.grid-container__component svg {
   width: 1.75rem;
 }
 
-.footer__pre__footer h6 {
+.grid-container__component h6 {
   font-size: 1.25rem;
   padding: 0;
   margin-bottom: 1rem;
 }
 
-.footer__pre__footer p {
+.grid-container__component p {
   margin-bottom: 1rem;
 }
 
-.footer__pre__footer a {
+.grid-container__component a {
   text-decoration: none;
   color: black;
 }
 
-.footer__pre__footer__column1 {
+.grid-container__component__column1 {
   background-color: red;
   padding: 1rem;
 }
 
-.footer__pre__footer__column2 {
+.grid-container__component__column2 {
   background-color: blue;
   padding: 1em;
 }
 
-.footer__pre__footer__column3 {
+.grid-container__component__column3 {
   background-color: green;
   padding: 1em;
 }
 
-.footer__pre__footer__column4 {
+.grid-container__component__column4 {
   background-color: yellow;
   padding: 1em;
 }

@@ -142,8 +142,7 @@ body {
     }
 }
 
-.footer {
-    &__pre__footer {
+   .grid-container__component {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -186,6 +185,8 @@ body {
             padding: 1em;  
         }
     }
+
+.footer {
     &__widgets{ 
         &__social{ 
             svg{ 
