@@ -8,7 +8,8 @@
 
 body {
   height: 100vh;
-  font-family: 'cormorant garamond', sans-serif;
+  font-family: "cormorant garamond", sans-serif;
+  background-color: whitesmoke;
 }
 
 .nav__toggle {
@@ -20,10 +21,11 @@ body {
 
 .nav__toggle svg {
   width: 1.5rem;
+  fill: whitesmoke;
 }
 
 .nav__toggle .ham__menu {
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
 }
 
 .nav__toggle .close {
@@ -65,7 +67,7 @@ body {
 
 .nav__menu li a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
   font-size: 1.3rem;
 }
 
@@ -86,37 +88,87 @@ body {
 }
 
 .header {
-  background: url(/images/icecream.jpg) center no-repeat fixed;
+  background: url(/images/Desktop/landingCover.jpg);
+  background-position: center;
   background-size: cover;
   height: 100vh;
+  position: relative;
 }
 
 .header__text {
-  padding: 0 1rem;
-  margin-top: 15rem;
+  position: absolute;
+  top: 30%;
   text-align: center;
+  width: 100%;
 }
 
 .header__text__heading {
+  color: whitesmoke;
   text-transform: uppercase;
   font-size: 3.25rem;
 }
 
 .header__text__time {
   margin-bottom: 1rem;
+  color: whitesmoke;
   font-weight: 700;
 }
 
 .header__text__location {
   font-weight: 700;
+  color: whitesmoke;
   margin-bottom: 2rem;
 }
 
 .header__button {
   text-decoration: none;
-  padding: 1rem 3rem;
+  padding-inline: 3rem;
+  padding-block: 1rem;
   color: black;
   background-color: whitesmoke;
+}
+
+.photo-container__heading {
+  text-align: center;
+  margin: 1rem 1rem;
+  font-weight: 700;
+}
+
+.photo-container h4 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.photo-container a {
+  text-decoration: none;
+  color: black;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+}
+
+.photo-container__item1__img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.photo-container__item1__btn {
+  text-align: center;
+}
+
+.photo-container__item1__btn a {
+  border-color: black;
+  display: inline-block;
+  border-style: solid;
+  padding: none;
+}
+
+.photo-container__item2__img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.photo-container__item2__btn {
+  text-align: center;
 }
 
 .grid-container__item1__img {
@@ -130,10 +182,16 @@ body {
 
 .grid-container__item2__content__header {
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .grid-container__item2__content__paragraph {
   margin-bottom: 2rem;
+}
+
+.grid-container__item2__content a {
+  text-decoration: none;
+  color: black;
 }
 
 .grid-container__item3__img {
@@ -147,6 +205,7 @@ body {
 
 .grid-container__item4__content__header {
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .grid-container__item4__content__paragraph {
@@ -155,6 +214,11 @@ body {
 
 .grid-container__item5__img {
   width: 100%;
+}
+
+.grid-container a {
+  text-decoration: none;
+  color: black;
 }
 
 .grid-container__component {
