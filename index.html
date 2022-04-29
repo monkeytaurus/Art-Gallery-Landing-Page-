@@ -1,206 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="app.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="app.css">
-</head>
+    <body>
+        <!-- HEADER -->
+        <header class="header">
+            <!-- NAVIGATION BAR -->
+            <nav class="nav">
+                <input type="checkbox" id="nav__checkbox" class="nav__checkbox" />
+                <!-- CREATING LABEL FOR INPUT -->
+                <label for="nav__checkbox" class="nav__toggle">
+                    <!-- HAMBURGER -->
+                    <svg class="ham__menu" viewBox="0 0 448 512" width="100" title="bars">
+                        <path
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                        />
+                    </svg>
 
-<body>
-    <!-- HEADER -->
-    <header class="header">
+                    <!-- EXIT BUTTON -->
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                        />
+                    </svg>
+                </label>
+                <!-- END OF LABEL -->
 
-        <!-- NAVIGATION BAR -->
-        <nav class="nav">
-            <input type="checkbox" id="nav__checkbox" class="nav__checkbox">
-            <!-- CREATING LABEL FOR INPUT -->
-            <label for="nav__checkbox" class="nav__toggle">
-
-                <!-- HAMBURGER -->
-                <svg class="ham__menu" viewBox="0 0 448 512" width="100" title="bars">
-                    <path
-                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
-                </svg>
-
-                <!-- EXIT BUTTON -->
-                <svg class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                    <path
-                        d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
-                </svg>
-            </label>
-            <!-- END OF LABEL -->
-
-            <ul class="nav__menu">
-                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4l24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9l2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"/></svg></a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header__text">
-            <h1 class="header__text__heading">Modern Art Exhibition</h1>
-            <p class="header__text__time">
-                Time: 9pm
-            </p>
-            <p class="header__text__location">
-                Location: Los Angeles, California
-            </p>
-            <a href="" class="header__button">
-                Learn More
-            </a>
-        </div>
-    </header>
-    <!-- END OF HEADER -->
-
-
-    <main>
-        <section class="photo-container">
-            <h2 class="photo-container__heading">
-                LICENSE TO LIVE
-            </h2>
-            <div class="photo-container__item1">
-                <img class="photo-container__item1__img" src="/images/Mobile/angel.jpg" alt="angel">
-                <h4 class="photo-container__item1__heading">             ADVENTURE
-                </h4>
-                <div class="photo-container__item1__btn">
-                    <a href="#" >Explore</a>
-                </div>
-            </div>
-            <div class="photo-container__item2">
-                <img class="photo-container__item2__img"src="/images/Mobile/mobileHallway.jpg" alt="hallway">
-                <h4 class="photo-container__item2__heading">
-                    CULTURE
-                </h4>
-                <div class="photo-container__item2__btn">
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- GRID CONTAINER -->
-        <section class="grid-container">
-
-            <!-- GRID CONTAINER ITEM 1 -->
-            <div class="grid-container__item1">
-                <img class="grid-container__item1__img" src="/images/Mobile/mobileLaocoön .jpg" alt="Laocoon">
-            </div>
-
-            <!-- GRID CONTAINER ITEM 2 -->
-            <div class="grid-container__item2">
-                <div class="grid-container__item2__content">
-                    <h6 class="grid-container__item2__content__header">Transform Your Brand</h6>
-                    <p class="grid-container__item2__content__paragraph">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Tempore dolorem maiores, aut rerum hic deleniti nisi quisquam deserunt totam?
-                        Exercitationem ea quaerat rem aliquid quod doloremque illo, adipisci mollitia possimus.
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
-
-
-            <!-- GRID CONTAINER ITEM 3 -->
-            <div class="grid-container__item3">
-                <img class="grid-container__item3__img" src="/images/Mobile/mobileHeadSculpture.jpg" alt="mobileHeadSculpture">
-            </div>
-
-            <!--GRID CONTAINER ITEM 4  -->
-            <div class="grid-container__item4">
-                <div class="grid-container__item4__content">
-                    <h6 class="grid-container__item4__content__header">Transform Your Brand</h6>
-                    <p class="grid-container__item2__content__paragraph">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Tempore dolorem maiores, aut rerum hic deleniti nisi quisquam deserunt totam?
-                        Exercitationem ea quaerat rem aliquid quod doloremque illo, adipisci mollitia possimus.
-                    </p>
-                    <a href="#">Learn More</a>
-                </div>
-
-            </div>
-            <div class="grid-container__item5">
-               <img class="grid-container__item5__img" src="/images/Desktop/desktopHallway.jpg" alt=""> 
-            </div>
-
-
-
-            </div>
-
-        </section>
-
-
-
-
-
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="footer__text">
-                <h2 class="footer__text__header">Moment</h2>
-                <h3 class="footer__text__contact">
-                    <strong>
-                        Contact
-                    </strong>
-                </h3>
-                <p class="footer__text__phone__label">
-                    Phone:
-                    <br>
-
-                    <a href="" class="footer__text__phone">
-                        896-296-2764
-                    </a>
-                </p>
-
-                <p class="footer__text__email__label">
-                    Email
-                </p>
-                <a href="" class="footer__text__email">
-                    ####@gmail.com
-                </a>
-                <h3 class="footer__text__social">
-                    Socials
-                </h3>
-
-            </div>
-
-
-
-            <!-- FOOTER WIDGET -->
-            <div class="footer__widgets">
-                <ul class="footer__widgets__social">
+                <ul class="nav__menu">
                     <li>
-                        <a href="#"></a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                            <path
-                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                        </svg>
+                        <a href="#"
+                            ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M244 246c-3.2-2-6.3-2.9-10.1-2.9-6.6 0-12.6 3.2-19.3 3.7l1.7 4.9zm135.9 197.9c-19 0-64.1 9.5-79.9 19.8l6.9 45.1c35.7 6.1 70.1 3.6 106-9.8-4.8-10-23.5-55.1-33-55.1zM340.8 177c6.6 2.8 11.5 9.2 22.7 22.1 2-1.4 7.5-5.2 7.5-8.6 0-4.9-11.8-13.2-13.2-23 11.2-5.7 25.2-6 37.6-8.9 68.1-16.4 116.3-52.9 146.8-116.7C548.3 29.3 554 16.1 554.6 2l-2 2.6c-28.4 50-33 63.2-81.3 100-31.9 24.4-69.2 40.2-106.6 54.6l-6.3-.3v-21.8c-19.6 1.6-19.7-14.6-31.6-23-18.7 20.6-31.6 40.8-58.9 51.1-12.7 4.8-19.6 10-25.9 21.8 34.9-16.4 91.2-13.5 98.8-10zM555.5 0l-.6 1.1-.3.9.6-.6zm-59.2 382.1c-33.9-56.9-75.3-118.4-150-115.5l-.3-6c-1.1-13.5 32.8 3.2 35.1-31l-14.4 7.2c-19.8-45.7-8.6-54.3-65.5-54.3-14.7 0-26.7 1.7-41.4 4.6 2.9 18.6 2.2 36.7-10.9 50.3l19.5 5.5c-1.7 3.2-2.9 6.3-2.9 9.8 0 21 42.8 2.9 42.8 33.6 0 18.4-36.8 60.1-54.9 60.1-8 0-53.7-50-53.4-60.1l.3-4.6 52.3-11.5c13-2.6 12.3-22.7-2.9-22.7-3.7 0-43.1 9.2-49.4 10.6-2-5.2-7.5-14.1-13.8-14.1-3.2 0-6.3 3.2-9.5 4-9.2 2.6-31 2.9-21.5 20.1L15.9 298.5c-5.5 1.1-8.9 6.3-8.9 11.8 0 6 5.5 10.9 11.5 10.9 8 0 131.3-28.4 147.4-32.2 2.6 3.2 4.6 6.3 7.8 8.6 20.1 14.4 59.8 85.9 76.4 85.9 24.1 0 58-22.4 71.3-41.9 3.2-4.3 6.9-7.5 12.4-6.9.6 13.8-31.6 34.2-33 43.7-1.4 10.2-1 35.2-.3 41.1 26.7 8.1 52-3.6 77.9-2.9 4.3-21 10.6-41.9 9.8-63.5l-.3-9.5c-1.4-34.2-10.9-38.5-34.8-58.6-1.1-1.1-2.6-2.6-3.7-4 2.2-1.4 1.1-1 4.6-1.7 88.5 0 56.3 183.6 111.5 229.9 33.1-15 72.5-27.9 103.5-47.2-29-25.6-52.6-45.7-72.7-79.9zm-196.2 46.1v27.2l11.8-3.4-2.9-23.8zm-68.7-150.4l24.1 61.2 21-13.8-31.3-50.9zm84.4 154.9l2 12.4c9-1.5 58.4-6.6 58.4-14.1 0-1.4-.6-3.2-.9-4.6-26.8 0-36.9 3.8-59.5 6.3z"
+                                /></svg
+                        ></a>
                     </li>
-                    <li>
-                        <a href="#"></a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                            <path
-                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-                        </svg>
-                    </li>
-                    <li>
-                        <a href="#"></a>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                            <path
-                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg>
-                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
+            </nav>
+            <div class="header__text">
+                <h1 class="header__text__heading">Modern Art Museum</h1>
+                <p class="header__text__time">Time: 9pm</p>
+                <p class="header__text__location">Location: Los Angeles, California</p>
+                <a href="" class="header__button"> Learn More </a>
             </div>
-        </footer>
+        </header>
+        <!-- END OF HEADER -->
 
-    </main>
-</body>
+        <main>
+            <section class="about-container">
+                <div class="about-container__content">
+                    <h2 class="about-container__heading">ABOUT THE MUSEUM</h2>
+                    <p class="about-container__paragraph">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi beatae molestias molestiae velit
+                        consectetur tempore, provident a rerum. Blanditiis quibusdam possimus iste, iure id quisquam expedita
+                        itaque excepturi enim recusandae!
+                    </p>
+                </div>
+            </section>
+            <!-- GRID CONTAINER -->
+            <section class="grid-container">
+                <!-- GRID CONTAINER ITEM 1 -->
+                <div class="grid-container__item1">
+                    <img class="grid-container__item1__img" src="/images/Mobile/mobileLaocoön .jpg" alt="Laocoon" />
+                </div>
 
-</html
+                <!-- GRID CONTAINER ITEM 2 -->
+                <div class="grid-container__item2">
+                    <div class="grid-container__item2__content">
+                        <h6 class="grid-container__item2__content__heading">Ancient Sculptures</h6>
+                        <p class="grid-container__item2__content__paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem maiores, aut rerum hic
+                            deleniti nisi quisquam deserunt totam? Exercitationem ea quaerat rem aliquid quod doloremque illo,
+                            adipisci mollitia possimus.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- GRID CONTAINER ITEM 3 -->
+                <div class="grid-container__item3">
+                    <img
+                        class="grid-container__item3__img"
+                        src="/images/Mobile/mobileHeadSculpture.jpg"
+                        alt="mobileHeadSculpture"
+                    />
+                </div>
+
+                <!--GRID CONTAINER ITEM 4  -->
+                <div class="grid-container__item4">
+                    <div class="grid-container__item4__content">
+                        <h6 class="grid-container__item4__content__header">A TASTE OF HISTORY</h6>
+                        <p class="grid-container__item4__content__paragraph">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore dolorem maiores, aut rerum hic
+                            deleniti nisi quisquam deserunt totam? Exercitationem ea quaerat rem aliquid quod doloremque illo,
+                            adipisci mollitia possimus.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-container__item5">
+                    <img class="grid-container__item5__img" src="/images/Desktop/desktopHallway.jpg" alt="" />
+                </div>
+                <div class="grid-container__item6">
+                    <div class="grid-container__item6__content">
+                        <h2 class="grid-container__item6__content__heading">About that one and special moment</h2>
+                        <p class="grid-container__item6__content__paragraph">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias corrupti, consectetur omnis nulla
+                            consequatur praesentium esse ipsam dolorem ad nesciunt aperiam architecto sequi quis sapiente in
+                            saepe ex similique ipsa.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="photo-container">
+                <img src="/images/Mobile/mobileHalfFace.jpg" alt="angel" class="photo-container__img" />
+                <img src="/images/Mobile/mobileArtifact.jpg" alt="artifact" class="photo-container__img" />
+                <img src="/images/Mobile/mobileBuddha.jpg" alt="Buddha" class="photo-container__img" />
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer__text">
+                    <h2 class="footer__text__header">Moment</h2>
+                    <h3 class="footer__text__contact">
+                        <strong> Contact </strong>
+                    </h3>
+                    <p class="footer__text__phone__label">
+                        Phone:
+                        <br />
+
+                        <a href="" class="footer__text__phone"> 896-296-2764 </a>
+                    </p>
+
+                    <p class="footer__text__email__label">Email</p>
+                    <a href="" class="footer__text__email"> ####@gmail.com </a>
+                    <h3 class="footer__text__social">Socials</h3>
+                </div>
+
+                <!-- FOOTER WIDGET -->
+                <div class="footer__widgets">
+                    <ul class="footer__widgets__social">
+                        <li>
+                            <a href="#"></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                                />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                                />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#"></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
