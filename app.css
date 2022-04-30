@@ -36,12 +36,18 @@ body {
   align-items: center;
   gap: 2rem;
 }
+.nav__menu .crown {
+  width: 1.5rem;
+  fill: whitesmoke;
+  display: none;
+}
 .nav__menu li {
   list-style: none;
   display: none;
 }
 .nav__menu li:first-child {
   margin-right: auto;
+  font-size: 1rem;
   display: block;
 }
 .nav__menu li a {
@@ -214,6 +220,10 @@ body {
   }
   .nav__menu li {
     display: block;
+  }
+  .nav__menu li .crown {
+    display: block;
+    margin-left: 0.3rem;
   }
 }
 

@@ -44,11 +44,17 @@ body {
         align-items: center;
         gap: 2rem;
 
+        .crown {
+            width: 1.5rem;
+            fill: whitesmoke;
+            display: none;
+        }
         li {
             list-style: none;
             display: none;
             &:first-child {
                 margin-right: auto;
+                font-size: 1rem;
                 display: block;
             }
 
@@ -261,6 +267,11 @@ body {
 
             li {
                 display: block;
+
+                .crown {
+                    display: block;
+                    margin-left: 0.3rem;
+                }
             }
         }
     }
