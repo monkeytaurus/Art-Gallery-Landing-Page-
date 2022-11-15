@@ -6,14 +6,17 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: "cormorant garamond", sans-serif;
   // margin: 0 auto;
   background-color: whitesmoke;
   //   background-color: black;
 }
 
-.nav {
+.nav { 
+	position: sticky;
+	top:0;
+	z-index:1;
   &__toggle {
     position: absolute;
     cursor: pointer;
@@ -46,8 +49,10 @@ body {
 
     .crown {
       width: 1.5rem;
+      // width: 8rem;
       fill: whitesmoke;
       display: none;
+      // display: block;
     }
     li {
       list-style: none;
@@ -98,7 +103,7 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  position: relative;
+
   &__text {
     // padding: 0 1rem;
 
@@ -268,6 +273,7 @@ body {
 //  Mobile Nav
 @media only screen and (min-width: 35rem) {
   .nav {
+		background-color: black;
     &__toggle {
       display: none;
     }

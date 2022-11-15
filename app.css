@@ -6,11 +6,16 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-family: "cormorant garamond", sans-serif;
   background-color: whitesmoke;
 }
 
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 .nav__toggle {
   position: absolute;
   cursor: pointer;
@@ -81,7 +86,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  position: relative;
 }
 .header__text {
   position: absolute;
@@ -217,6 +221,9 @@ body {
 }
 
 @media only screen and (min-width: 35rem) {
+  .nav {
+    background-color: black;
+  }
   .nav__toggle {
     display: none;
   }
